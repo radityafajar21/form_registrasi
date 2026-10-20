@@ -14,8 +14,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   // Controller
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
-  final _phoneController = TextEditingController();
-  final _dobController = TextEditingController();
+  final _phoneController = TextEditingController(); // Latihan 1
+  final _dobController = TextEditingController();   // Latihan 2
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
 
@@ -23,8 +23,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   bool _obscurePassword = true;
   bool _obscureConfirmPassword = true;
   bool _isLoading = false;
-  String? _selectedGender;
-  bool _isAgreedToTerms = false;
+  String? _selectedGender; // Latihan 3
+  bool _isAgreedToTerms = false; // Latihan 4
   bool _termsError = false;
 
   // Latihan 5: State Kekuatan Password
@@ -146,7 +146,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     }
   }
 
-  // Latihan 2: Picker Tanggal
+  // Latihan 2: DatePicker
   Future<void> _selectDate() async {
     DateTime? picked = await showDatePicker(
       context: context,
@@ -161,7 +161,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     }
   }
 
-  // Submit Handler
   void _submitForm() {
     bool isFormValid = _formKey.currentState!.validate();
 
@@ -206,7 +205,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     }
   }
 
-  // Reset Handler
   void _resetForm() {
     _formKey.currentState!.reset();
     _nameController.clear();
